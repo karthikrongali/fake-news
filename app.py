@@ -31,6 +31,7 @@ def predict():
         message = request.form['message']
         pred = fake_news_det(message)
         print(pred)
+        print("Data has been fetched successfully!")
         return render_template('index.html', prediction=pred)
     else:
         return render_template('index.html', prediction="Something went wrong")
